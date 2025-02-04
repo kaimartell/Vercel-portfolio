@@ -29,6 +29,11 @@ export default function Home() {
                 </a>
               </li>
               <li>
+                <a href="#coursework" className="font-bold hover:text-purple-400 transition-colors">
+                  Coursework
+                </a>
+              </li>
+              <li>
                 <a href="#contact" className="font-bold hover:text-green-400 transition-colors">
                   Contact
                 </a>
@@ -63,22 +68,25 @@ export default function Home() {
               <p className="text-lg text-gray-300 mb-6">
                 Something something something
               </p>
-              <Link href="/resume.pdf" legacyBehavior>
+              <Link href="/Kai Martell Resume.pdf" legacyBehavior>
                 <a className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded transition-colors max-w-xs mx-auto">
                   View My Resume
                 </a>
               </Link>
             </div>
 
-            {/* Enlarged Profile Picture */}
+            {/* Responsive, Enlarged Profile Picture */}
             <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                <div className="relative w-full h-[1200px] rounded-lg overflow-hidden shadow-lg">
-                <Image
+                <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg md:transform md:-translate-x-20">
+                {/* The container below uses an aspect ratio to keep the image responsive */}
+                <div className="relative aspect-[3/4]">
+                  <Image
                   src="/profile.jpeg"
                   layout="fill"
                   objectFit="cover"
                   alt="Profile Picture"
-                />
+                  />
+                </div>
                 </div>
             </div>
           </section>
@@ -102,9 +110,34 @@ export default function Home() {
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Project {id}</h3>
                     <p className="text-gray-400">
-                      A brief description of project {id}. 
-                      Learn more about its innovative
-                      solutions and technical details.
+                      A brief description of project {id}. Learn more about its innovative solutions and technical details.
+                    </p>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Coursework Portfolio Section */}
+          <section id="coursework" className="py-20 px-4">
+            <h2 className="text-3xl font-semibold text-center mb-10">Coursework Portfolio</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3, 4].map((id) => (
+                <Link key={id} href={`/coursework/coursework-${id}`} legacyBehavior>
+                  <a className="bg-gray-800 p-4 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                    {/* Thumbnail Image */}
+                    <div className="relative w-full h-32 mb-4">
+                      <Image
+                        src={`/coursework/coursework-${id}.jpeg`}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={`Coursework ${id} Thumbnail`}
+                        className="rounded-md"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Coursework {id}</h3>
+                    <p className="text-gray-400 text-sm">
+                      A brief description of coursework {id}.
                     </p>
                   </a>
                 </Link>
