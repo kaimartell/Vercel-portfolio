@@ -51,7 +51,7 @@ export default function Home() {
                 layout="fill"
                 objectFit="cover"
                 alt="Background"
-                className="opacity-20"
+                className="opacity-40"
               />
             </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
                 Something something something
               </p>
               <Link href="/resume.pdf" legacyBehavior>
-                <a className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+                <a className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded transition-colors max-w-xs mx-auto">
                   View My Resume
                 </a>
               </Link>
@@ -72,14 +72,14 @@ export default function Home() {
 
             {/* Enlarged Profile Picture */}
             <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
-              <div className="relative w-96 h-96 rounded-lg overflow-hidden shadow-lg border-4 border-green-400">
+                <div className="relative w-full h-[1200px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/profile.jpeg"
                   layout="fill"
                   objectFit="cover"
                   alt="Profile Picture"
                 />
-              </div>
+                </div>
             </div>
           </section>
 
