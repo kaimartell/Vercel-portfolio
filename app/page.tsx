@@ -21,7 +21,7 @@ export default function Home() {
         Welcome to My Portfolio
           </h1>
           <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-        Hi, I'm [Your Name], a [Your Profession]. I love building cool things with technology.
+            Hi, I&apos;m [Your Name], a [Your Profession]. I love building cool things with technology.
           </p>
         </div>
         <div className="w-full md:w-1/3 lg:w-1/4">
