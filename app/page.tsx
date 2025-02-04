@@ -1,62 +1,157 @@
+import Head from 'next/head';
 import Link from "next/link";
 import Image from "next/image";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-8 relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full opacity-20">
-        <Image 
-          src="/background.jpeg" 
-          layout="fill" 
-          objectFit="cover"  
-          alt="Background" 
-        />
-      </div>
+    <>
+      <Head>
+        <title>My Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative">
+        {/* Sticky Navigation Bar */}
+        <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md">
+          <nav className="container mx-auto flex justify-between items-center p-4">
+            <div className="text-2xl font-bold">
+              My Portfolio
+            </div>
+            <ul className="flex space-x-6">
+              <li>
+                <a href="#about" className="font-bold hover:text-pink-400 transition-colors">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="font-bold hover:text-orange-400 transition-colors">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="font-bold hover:text-green-400 transition-colors">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-      {/* Intro Section */}
-      <section className="flex items-center justify-center py-20 relative z-10">
-        <div className="w-full md:w-2/3 lg:w-1/2 text-center">
-          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-        Welcome to My Portfolio
-          </h1>
-          <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-            Hi, I&apos;m [Your Name], a [Your Profession]. I love building cool things with technology.
-          </p>
-        </div>
-        <div className="w-full md:w-1/3 lg:w-1/4">
-          <Image src="/profile.jpeg" width={1000} height={1250} className="rounded-lg mx-auto mb-6" alt="Profile" />
-        </div>
-      </section>
+        {/* Main Content */}
+        <div className="relative z-10 pt-20">
+          {/* About Section */}
+          <section
+            id="about"
+            className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
+          >
+            {/* Background Image (only for About Section) */}
+            <div className="absolute inset-0">
+              <Image
+                src="/background.jpeg"
+                layout="fill"
+                objectFit="cover"
+                alt="Background"
+                className="opacity-20"
+              />
+            </div>
 
+            {/* Bio Text Content */}
+            <div className="relative z-10 md:w-1/2 text-center flex flex-col justify-center">
+              <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-orange-400 to-green-400">
+                Hi, I&apos;m Kai!
+              </h1>
+              <p className="text-lg text-gray-300 mb-6">
+                Something something something
+              </p>
+              <Link href="/resume.pdf" legacyBehavior>
+                <a className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition-colors">
+                  View My Resume
+                </a>
+              </Link>
+            </div>
 
-
-      {/* Projects Section */}
-      <section className="py-20 relative z-10">
-        <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((id) => (
-            <Link key={id} href={`/projects/project-${id}`}>
-              <div className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer hover:scale-105 transition-transform">
-                <h3 className="text-xl font-semibold">Project {id}</h3>
-                <p className="text-gray-400 mt-2">A brief description of the project.</p>
+            {/* Enlarged Profile Picture */}
+            <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
+              <div className="relative w-96 h-96 rounded-lg overflow-hidden shadow-lg border-4 border-green-400">
+                <Image
+                  src="/profile.jpeg"
+                  layout="fill"
+                  objectFit="cover"
+                  alt="Profile Picture"
+                />
               </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+            </div>
+          </section>
 
-      {/* Social Section */}
-      <section className="py-20 text-center relative z-10">
-        <h2 className="text-3xl font-semibold mb-6">Connect with Me</h2>
-        <div className="flex justify-center space-x-6">
-          <a href="https://linkedin.com" target="_blank" className="text-blue-400 hover:underline">LinkedIn</a>
-          <a href="https://github.com" target="_blank" className="text-gray-400 hover:underline">GitHub</a>
-          <a href="mailto:your@email.com" className="text-red-400 hover:underline">Email</a>
-          <a href="/resume.pdf" className="text-green-400 hover:underline">Resume</a>
+          {/* Projects Section */}
+          <section id="projects" className="py-20 px-4">
+            <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[1, 2, 3].map((id) => (
+                <Link key={id} href={`/projects/project-${id}`} legacyBehavior>
+                  <a className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300">
+                    {/* Thumbnail Image */}
+                    <div className="relative w-full h-48 mb-4">
+                      <Image
+                        src={`/projects/project-${id}.jpeg`}
+                        layout="fill"
+                        objectFit="cover"
+                        alt={`Project ${id} Thumbnail`}
+                        className="rounded-md"
+                      />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Project {id}</h3>
+                    <p className="text-gray-400">
+                      A brief description of project {id}. 
+                      Learn more about its innovative
+                      solutions and technical details.
+                    </p>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {/* Contact / Socials Section */}
+          <section id="contact" className="py-20 px-4 text-center">
+            <h2 className="text-3xl font-semibold mb-6">Connect with Me</h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a
+                href="https://www.linkedin.com/in/kai-martell-b27858188/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-blue-400 hover:text-blue-500 transition-colors"
+              >
+                <FaLinkedin size={24} />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/kaimartell"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-gray-400 hover:text-gray-500 transition-colors"
+              >
+                <FaGithub size={24} />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="mailto:martell.kai@gmail.com"
+                className="flex items-center space-x-2 text-red-400 hover:text-red-500 transition-colors"
+              >
+                <FaEnvelope size={24} />
+                <span>Email</span>
+              </a>
+              <a
+                href="tel:+14157154856"
+                className="flex items-center space-x-2 text-green-400 hover:text-green-500 transition-colors"
+              >
+                <FaPhone size={24} />
+                <span>+1 (415) 715-4856</span>
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
-    </main>
+      </main>
+    </>
   );
 }
-
