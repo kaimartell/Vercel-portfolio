@@ -6,7 +6,12 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white p-8 relative">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full opacity-20">
-        <Image src="/background.jpeg" layout="fill" objectFit="cover" alt="Background" />
+        <Image 
+          src="/background.jpeg" 
+          layout="fill" 
+          objectFit="cover"  // This should be 'objectFit', which is correct
+          alt="Background" 
+        />
       </div>
 
       {/* Intro Section */}
@@ -24,7 +29,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
 
       {/* Projects Section */}
       <section className="py-20 relative z-10">
