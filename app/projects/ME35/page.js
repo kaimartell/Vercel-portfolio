@@ -33,7 +33,7 @@ export default function ME35Portfolio() {
       height: 1080,
       notionLink: "https://ember-walleye-c49.notion.site/Jeep-113e7595b6cd80b0acb7deb19e4482d5?pvs=74",
       description:
-        "A remote-controlled Jeep with a rack and pinion steering system, complete with a steering wheel that uses OpenMV camera and AprilTags. A pyscript control page to complement the hardware.",
+        "A remote-controlled Jeep with a rack and pinion steering system, complete with a steering wheel that uses OpenMV camera and AprilTags. A pyscript control page to complement the hardware. With Cory Lemberg, see corylemberg.com",
     },
     {
       id: 4,
