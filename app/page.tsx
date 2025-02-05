@@ -50,7 +50,6 @@ export default function Home() {
           {/* Responsive, Enlarged Profile Picture */}
           <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
             <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg md:transform md:-translate-x-20">
-              {/* Use an aspect ratio container for responsiveness */}
               <div className="relative aspect-[3/4]">
                 <Image
                   src="/profile.jpeg"
@@ -73,7 +72,6 @@ export default function Home() {
                 href={id === 1 ? "/projects/topo-maps" : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
-                {/* Thumbnail Image */}
                 <div className="relative w-full h-48 mb-4">
                   <Image
                     src={

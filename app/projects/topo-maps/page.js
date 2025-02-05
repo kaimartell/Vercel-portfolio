@@ -107,7 +107,7 @@ export default function TopographicalMaps() {
                   <div className="bg-gray-800 rounded-lg overflow-hidden">
                     <div className="relative w-full h-[50vh]">
                       <Image
-                        src="/sf-sideview.jpeg"
+                        src="/SF-sideview.jpeg"
                         layout="fill"
                         objectFit="cover"
                         alt="San Francisco Side View"
