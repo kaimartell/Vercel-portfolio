@@ -33,15 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   href="/#projects"
                   className="font-bold hover:text-orange-400 transition-colors"
                 >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#coursework"
-                  className="font-bold hover:text-purple-400 transition-colors"
-                >
-                  Coursework
+                  Projects & Coursework
                 </Link>
               </li>
               <li>

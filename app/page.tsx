@@ -69,7 +69,9 @@ export default function Home() {
             {[1, 2, 3].map((id) => (
               <Link
                 key={id}
-                href={id === 1 ? "/projects/topo-maps" : `/projects/project-${id}`}
+                href={id === 1 ? "/projects/topo-maps" 
+                    : id === 2 ? "/projects/ME35"
+                    : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="relative w-full h-48 mb-4">
@@ -77,6 +79,8 @@ export default function Home() {
                     src={
                       id === 1
                         ? "/topo-thumbnail.jpeg"
+                        : id === 2
+                        ? "/me35-thumbnail.jpeg"
                         : `/projects/project-${id}.jpeg`
                     }
                     layout="fill"
@@ -84,17 +88,23 @@ export default function Home() {
                     alt={
                       id === 1
                         ? "Topographical Maps Thumbnail"
+                        : id === 2
+                        ? "ME35 Thumbnail"
                         : `Project ${id} Thumbnail`
                     }
                     className="rounded-md"
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  {id === 1 ? "Topographical Maps" : `Project ${id}`}
+                  {id === 1 ? "Topographical Maps" 
+                  : id === 2 ? "ME35 - Intro to Robotics"
+                  : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
                   {id === 1
                     ? "Explore my topographical maps project."
+                    : id === 2
+                    ? "Learn about my ME35 coursework."
                     : `A brief description of project ${id}. 
                       Learn more about its innovative solutions and technical details.`}
                 </p>
