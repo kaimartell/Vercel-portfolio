@@ -2,23 +2,18 @@
 import "./globals.css";
 import Link from "next/link";
 
-// You can also use the new metadata export to set global title/description
 export const metadata = {
   title: "My Portfolio",
   description: "My Portfolio Website",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
         {/* Global Header */}
         <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md">
-          <nav className="container mx-auto flex justify-between items-center p-4">
+          <nav className="container mx-auto flex justify-between items-center p-4 text-white">
             <div className="text-2xl font-bold">
               <Link href="/" className="hover:underline">
                 My Portfolio

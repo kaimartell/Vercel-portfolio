@@ -11,8 +11,8 @@ export async function generateStaticParams() {
   return projects;
 }
 
-export default function ProjectPage({ params }) {
-  const { projectId } = params;
+export default async function ProjectPage({ params }) {
+  const { projectId } = await params;
 
   // Dummy project data – update with your actual data/fetching logic.
   const projectData = {
