@@ -71,6 +71,7 @@ export default function Home() {
                 key={id}
                 href={id === 1 ? "/projects/topo-maps" 
                     : id === 2 ? "/projects/ME35"
+                    : id === 3 ? "/projects/ME93"
                     : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
@@ -81,6 +82,8 @@ export default function Home() {
                         ? "/topo-thumbnail.jpeg"
                         : id === 2
                         ? "/me35-thumbnail.jpeg"
+                        : id === 3
+                        ? "/me93-thumbnail.jpeg"
                         : `/projects/project-${id}.jpeg`
                     }
                     layout="fill"
@@ -90,6 +93,8 @@ export default function Home() {
                         ? "Topographical Maps Thumbnail"
                         : id === 2
                         ? "ME35 Thumbnail"
+                        : id === 3
+                        ? "ME93 Thumbnail"
                         : `Project ${id} Thumbnail`
                     }
                     className="rounded-md"
@@ -98,6 +103,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2">
                   {id === 1 ? "Topographical Maps" 
                   : id === 2 ? "ME35 - Intro to Robotics"
+                  : id === 3 ? "ME93 - Design for Fabrication"
                   : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
