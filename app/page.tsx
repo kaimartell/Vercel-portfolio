@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
@@ -14,9 +14,7 @@ export default function Home() {
         {/* Sticky Navigation Bar */}
         <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md">
           <nav className="container mx-auto flex justify-between items-center p-4">
-            <div className="text-2xl font-bold">
-              My Portfolio
-            </div>
+            <div className="text-2xl font-bold">My Portfolio</div>
             <ul className="flex space-x-6">
               <li>
                 <a href="#about" className="font-bold hover:text-pink-400 transition-colors">
@@ -65,29 +63,28 @@ export default function Home() {
               <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-orange-400 to-green-400">
                 Hi, I&apos;m Kai!
               </h1>
-              <p className="text-lg text-gray-300 mb-6">
-                Something something something
-              </p>
-              <Link href="/Kai Martell Resume.pdf" legacyBehavior>
-                <a className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded transition-colors max-w-xs mx-auto">
-                  View My Resume
-                </a>
+              <p className="text-lg text-gray-300 mb-6">Something something something</p>
+              <Link
+                href="/Kai Martell Resume.pdf"
+                className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded transition-colors max-w-xs mx-auto"
+              >
+                View My Resume
               </Link>
             </div>
 
             {/* Responsive, Enlarged Profile Picture */}
             <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg md:transform md:-translate-x-20">
+              <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg md:transform md:-translate-x-20">
                 {/* The container below uses an aspect ratio to keep the image responsive */}
                 <div className="relative aspect-[3/4]">
                   <Image
-                  src="/profile.jpeg"
-                  layout="fill"
-                  objectFit="cover"
-                  alt="Profile Picture"
+                    src="/profile.jpeg"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="Profile Picture"
                   />
                 </div>
-                </div>
+              </div>
             </div>
           </section>
 
@@ -96,50 +93,79 @@ export default function Home() {
             <h2 className="text-3xl font-semibold text-center mb-10">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[1, 2, 3].map((id) => (
-                <Link key={id} href={`/projects/project-${id}`} legacyBehavior>
-                  <a className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                    {/* Thumbnail Image */}
-                    <div className="relative w-full h-48 mb-4">
-                      <Image
-                        src={`/projects/project-${id}.jpeg`}
-                        layout="fill"
-                        objectFit="cover"
-                        alt={`Project ${id} Thumbnail`}
-                        className="rounded-md"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Project {id}</h3>
-                    <p className="text-gray-400">
-                      A brief description of project {id}. Learn more about its innovative solutions and technical details.
-                    </p>
-                  </a>
+                <Link
+                  key={id}
+                  href={
+                    id === 1
+                      ? "/projects/topo-maps"
+                      : `/projects/project-${id}`
+                  }
+                  className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
+                >
+                  {/* Thumbnail Image */}
+                  <div
+                    className={
+                      id === 1
+                        ? "relative w-full aspect-[16/9] mb-4"
+                        : "relative w-full h-48 mb-4"
+                    }
+                  >
+                    <Image
+                      src={
+                        id === 1
+                          ? "/topo-thumbnail.jpeg"
+                          : `/projects/project-${id}.jpeg`
+                      }
+                      layout="fill"
+                      objectFit="cover"
+                      alt={
+                        id === 1
+                          ? "Topographical Maps Thumbnail"
+                          : `Project ${id} Thumbnail`
+                      }
+                      className="rounded-md"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {id === 1 ? "Topographical Maps" : `Project ${id}`}
+                  </h3>
+                  <p className="text-gray-400">
+                    {id === 1
+                      ? "Explore my topographical maps project."
+                      : `A brief description of project ${id}. 
+                        Learn more about its innovative solutions and technical details.`}
+                  </p>
                 </Link>
               ))}
             </div>
           </section>
+
+
 
           {/* Coursework Portfolio Section */}
           <section id="coursework" className="py-20 px-4">
             <h2 className="text-3xl font-semibold text-center mb-10">Coursework Portfolio</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[1, 2, 3, 4].map((id) => (
-                <Link key={id} href={`/coursework/coursework-${id}`} legacyBehavior>
-                  <a className="bg-gray-800 p-4 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                    {/* Thumbnail Image */}
-                    <div className="relative w-full h-32 mb-4">
-                      <Image
-                        src={`/coursework/coursework-${id}.jpeg`}
-                        layout="fill"
-                        objectFit="cover"
-                        alt={`Coursework ${id} Thumbnail`}
-                        className="rounded-md"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Coursework {id}</h3>
-                    <p className="text-gray-400 text-sm">
-                      A brief description of coursework {id}.
-                    </p>
-                  </a>
+                <Link
+                  key={id}
+                  href={`/coursework/coursework-${id}`}
+                  className="bg-gray-800 p-4 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
+                >
+                  {/* Thumbnail Image */}
+                  <div className="relative w-full h-32 mb-4">
+                    <Image
+                      src={`/coursework/coursework-${id}.jpeg`}
+                      layout="fill"
+                      objectFit="cover"
+                      alt={`Coursework ${id} Thumbnail`}
+                      className="rounded-md"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Coursework {id}</h3>
+                  <p className="text-gray-400 text-sm">
+                    A brief description of coursework {id}.
+                  </p>
                 </Link>
               ))}
             </div>
