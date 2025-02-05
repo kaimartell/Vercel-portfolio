@@ -50,14 +50,16 @@ const projects = [
     title: "Chair",
     mainImage: "/chair.jpeg",
     description: `
-      
-    `,
+      In this project, I built a chair from scratch. My goal for the chair was to create something minimalistic and sturdy, while incorporating an interesting angle. 
+      To start, I designed the chair in Onshape, making sure to account for the angles and dimensions of the chair. I used the planar to smooth all pieces, and cut using the miter saw, the table saw, and the band saw.  Many of the joints were made using a dowel jig with dowels and wood glue to reinforce. 
+    ` 
+    ,
     technologies: ["Onshape/Solidworks", "Table Saw", "Miter Saw", "Biscuit Joiner", "Planar", "Band Saw", "Dowel Jig"],
     materials: ["2x 8ft. 2x4", "1x 15x15 plywood", "1x 8ft. 2x2", "Dowel Rods", "Wood Glue", "Screws"],
     skills: ["Wood Working", "CAD Design", "Joinery"],
     challenges: `
-      Here, we had trouble with sensor calibration and ensuring 
-      the user interface was intuitive. 
+      The biggest challenge was the joinery. One of my project goals was to conceal all screws and dowels as much as possible. I used the dowel jig to join multiple pieces together, lots of wood glue, and learned how to create a pocket screw hole for angled, hidden joints.
+
     `,
     moreImages: [
       "/chair-proto.jpeg",
@@ -224,7 +226,7 @@ export default function MyNewCoursePortfolio() {
                 <p className="text-gray-300">
                   I’ll keep this page updated with future projects as I progress through
                   the course. Check back regularly to see what’s new, or reach out if you’d
-                  like to chat about my work. Thanks for following along!
+                  like to chat about my work.
                 </p>
               </section>
             </div>
