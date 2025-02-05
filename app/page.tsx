@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My Portfolio</title>
+        <title>Kai Martell</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* 
