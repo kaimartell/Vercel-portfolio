@@ -3,8 +3,11 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "My Portfolio",
+  title: "Kai Martell",
   description: "My Portfolio Website",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

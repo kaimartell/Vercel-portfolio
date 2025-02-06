@@ -73,7 +73,8 @@ export default function Home() {
                     : id === 2 ? "/projects/ME35"
                     : id === 3 ? "/projects/ME93"
                     : id === 4 ? "/projects/BME66"
-                    : id === 5 ? "/projects/segment-hunter"
+                    : id === 5 ? "/projects/this-website"
+                    : id === 6 ? "/projects/segment-hunter"
                     : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
@@ -89,6 +90,8 @@ export default function Home() {
                         : id === 4
                         ? "/bme66-thumbnail.jpeg"
                         : id === 5
+                        ? "/website-thumbnail.jpeg"
+                        : id === 6
                         ? "/segment-hunter-thumbnail.jpeg"
                         : `/projects/project-${id}.jpeg`
                     }
@@ -104,6 +107,8 @@ export default function Home() {
                         : id === 4
                         ? "BME66 Thumbnail"
                         : id === 5
+                        ? "This Website Thumbnail"
+                        : id === 6
                         ? "Segment Hunter Thumbnail"
                         : `Project ${id} Thumbnail`
                     }
@@ -115,7 +120,8 @@ export default function Home() {
                   : id === 2 ? "ME35 - Intro to Robotics"
                   : id === 3 ? "ME93 - Design for Fabrication"
                   : id === 4 ? "BME66 - Engineering Design"
-                  : id === 5 ? "Segment Hunter"
+                  : id === 5 ? "This Website"
+                  : id === 6 ? "Segment Hunter"
                   : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
@@ -128,6 +134,8 @@ export default function Home() {
                     : id === 4
                     ? "Designing a product for hand warmth"
                     : id === 5
+                    ? "A brief overview of the creation of this website"
+                    : id === 6
                     ? "A tool for Strava users to find segments"
                     : `A brief description of project ${id}. 
                       Learn more about its innovative solutions and technical details.`}
