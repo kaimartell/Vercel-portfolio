@@ -3,12 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function HandWarmingBracelet() {
-  // Example images array for the gallery
+  //Images
   const images = [
     "/handiheat1.jpeg",
     "/handiheat2.jpeg",
     "/handiheat3.jpeg",
-    // Add more as needed
   ];
 
 return (
@@ -19,19 +18,16 @@ return (
         </Head>
 
         <main className="min-h-screen bg-gray-900 text-white">
-            {/* If you have a global fixed nav with top padding, offset it with "-mt-20" if needed. */}
             <div className="-mt-20">
-                {/* Hero Image */}
                 <div className="w-full relative">
                     <Image
-                        src="/bme66-background.jpeg" // Replace with your hero image path
+                        src="/bme66-background.jpeg" 
                         alt="Hand-Warming Bracelet Hero"
                         layout="responsive"
                         width={1920}
                         height={1080}
                         objectFit="cover"
                     />
-                    {/* Optional overlay for better contrast */}
                     <div className="absolute inset-0 bg-black bg-opacity-40" />
                 </div>
 
@@ -42,7 +38,7 @@ return (
                             Hand-Warming Bracelet
                         </h1>
 
-                        {/* Short Description */}
+                        {/* Description */}
                         <p className="text-gray-300 mb-6">
                             This semester-long project focused on designing and prototyping a wearable
                             device that can warm your hands on the go. Our goal was to seamlessly blend
@@ -50,7 +46,7 @@ return (
                             anyone who wants an on-demand heat boost.
                         </p>
 
-                        {/* External Link to Full Project Website */}
+                        {/* Project Website */}
                         <div className="mb-8">
                             <Link
                                 href="https://www.example-handwarmingbracelet.com"

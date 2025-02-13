@@ -3,13 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function ME35Portfolio() {
-  // Example array of 6 projects
   const projects = [
     {
       id: 1,
       title: "Lighthouse Nightlight",
       image: "/lighthouse.jpeg",
-      width: 600,    // approximate dimensions
+      width: 600,  
       height: 800,
       notionLink: "https://ember-walleye-c49.notion.site/Proj-1-Cont-Lighthouse-Nightlight-51b83c953cfc414d90a7d5d2e80ef86d?pvs=74",
       description:
@@ -73,14 +72,8 @@ export default function ME35Portfolio() {
         <title>ME35 Robotics Portfolio - My Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* 
-        Updated background to a subtle gradient.
-        Text color remains white by default.
-      */}
       <main className="min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-black text-white">
         <div className="-mt-20">
-          {/* Title / Hero Image */}
           <div className="w-full relative overflow-hidden">
             <Image
               src="/me35-background.jpeg"
@@ -90,17 +83,12 @@ export default function ME35Portfolio() {
               height={1080}
               objectFit="cover"
             />
-            {/* Optional overlay color effect */}
             <div className="absolute inset-0 bg-black bg-opacity-40" />
           </div>
 
           {/* Content */}
           <div className="p-8">
             <div className="max-w-5xl mx-auto">
-              {/* 
-                Main Title with gradient text
-                - use text-transparent & bg-clip-text for gradient text
-              */}
               <h1 className="text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-400 to-indigo-500">
                 ME35 Robotics Portfolio
               </h1>
@@ -113,7 +101,7 @@ export default function ME35Portfolio() {
                 on Notion.
               </p>
 
-              {/* Alternating Projects Layout */}
+              {/* Projects Layout */}
               {projects.map((project, index) => {
                 const isReversed = index % 2 === 1;
                 return (
@@ -123,10 +111,6 @@ export default function ME35Portfolio() {
                       isReversed ? "md:flex-row-reverse" : ""
                     } items-center gap-6 mb-20`}
                   >
-                    {/* 
-                      Project Image Container with hover effects: 
-                      scale, shadow, ring glow.
-                    */}
                     <div className="relative w-full md:w-1/2 md:max-w-md rounded-lg overflow-hidden mx-auto transition transform hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-indigo-500 hover:ring-offset-2 hover:ring-offset-gray-900">
                       <Image
                         src={project.image}
@@ -157,7 +141,6 @@ export default function ME35Portfolio() {
 
               {/* Next Steps */}
               <section className="mb-12">
-                {/* Subtle color shift for heading */}
                 <h2 className="text-3xl font-bold mb-3 text-indigo-200 hover:text-indigo-100 transition-colors">
                   Next Steps
                 </h2>

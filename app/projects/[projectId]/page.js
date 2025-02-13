@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// This function tells Next.js which dynamic routes to pre-render at build time.
 export async function generateStaticParams() {
   const projects = [
     { projectId: "project-1" },
@@ -14,7 +13,6 @@ export async function generateStaticParams() {
 export default async function ProjectPage({ params }) {
   const { projectId } = await params;
 
-  // Dummy project data – update with your actual data/fetching logic.
   const projectData = {
     "project-1": {
       title: "Project 1",

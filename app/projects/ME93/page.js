@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 
-// Sample project data with more fields:
 const projects = [
   {
     id: 1,
@@ -71,7 +70,7 @@ const projects = [
       "Me sitting in the chair"
     ]
   },
-  // Add more projects...
+  // More projects coming soon
 ];
 
 export default function MyNewCoursePortfolio() {
@@ -83,9 +82,7 @@ export default function MyNewCoursePortfolio() {
       </Head>
 
       <main className="min-h-screen bg-gray-900 text-white">
-        {/* If you have a fixed navbar with top padding globally, consider -mt-20 here */}
         <div className="-mt-20">
-          {/* Hero / Title Image (Optional) */}
           <div className="w-full relative">
             <Image
               src="/dff-background.jpeg"
@@ -101,7 +98,6 @@ export default function MyNewCoursePortfolio() {
           {/* Page Content */}
           <div className="p-8">
             <div className="max-w-5xl mx-auto">
-              {/* Page Heading */}
               <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 leading-tight">
                 ME93 - Design for Fabrication
               </h1>
@@ -111,13 +107,12 @@ export default function MyNewCoursePortfolio() {
                 overview of each project.
               </p>
 
-              {/* Render each project in its own card-like section */}
+              {/* Render like cards */}
               {projects.map((proj) => (
                 <div
                   key={proj.id}
                   className="mb-12 bg-gray-800 rounded-lg shadow-lg overflow-hidden"
                 >
-                {/* Main Image */}
                 <div className="relative w-full" style={{ paddingBottom: '100%' }}>
                     <Image
                         src={proj.mainImage}
@@ -129,24 +124,19 @@ export default function MyNewCoursePortfolio() {
 
                 {/* Project Content */}
                   <div className="p-6 space-y-6">
-                    {/* Title */}
                     <h2 className="text-3xl font-semibold">
                       {proj.title}
                     </h2>
 
-                    {/* Subtitle */}
                     <h3 className="text-xl font-small text-gray-400 italic">
                         {proj.subtitle}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-gray-300 whitespace-pre-line">
                       {proj.description}
                     </p>
 
-                    {/* Technologies / Materials / Skills */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {/* Technologies */}
                       <div>
                         <h3 className="text-xl font-semibold text-purple-300 mb-2">
                           Technologies
@@ -157,7 +147,6 @@ export default function MyNewCoursePortfolio() {
                           ))}
                         </ul>
                       </div>
-                      {/* Materials */}
                       <div>
                         <h3 className="text-xl font-semibold text-blue-300 mb-2">
                           Materials
@@ -168,7 +157,6 @@ export default function MyNewCoursePortfolio() {
                           ))}
                         </ul>
                       </div>
-                      {/* Skills */}
                       <div>
                         <h3 className="text-xl font-semibold text-green-300 mb-2">
                           Skills
@@ -181,7 +169,6 @@ export default function MyNewCoursePortfolio() {
                       </div>
                     </div>
 
-                    {/* Challenges */}
                     <div>
                       <h3 className="text-xl font-semibold text-red-300 mb-2">
                         Challenges
@@ -191,7 +178,6 @@ export default function MyNewCoursePortfolio() {
                       </p>
                     </div>
 
-                    {/* More Pictures */}
                     {proj.moreImages && proj.moreImages.length > 0 && (
                     <div>
                         <h3 className="text-xl font-semibold text-yellow-300 mb-3">

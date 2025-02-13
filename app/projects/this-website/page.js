@@ -3,19 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function WebsiteCreation() {
-  // Example images array for a small gallery
   const images = [
     {
       src: "/github.jpeg",
       alt: "GitHub Screenshot",
-      width: 1200, // approximate width
-      height: 600, // approximate height (horizontal)
+      width: 1200, 
+      height: 600,
     },
     {
       src: "/vscode.jpeg",
       alt: "VSCode Screenshot",
-      width: 600,  // approximate width
-      height: 800, // approximate height (vertical)
+      width: 600, 
+      height: 800,
     },
   ];
 
@@ -28,7 +27,6 @@ export default function WebsiteCreation() {
 
       <main className="min-h-screen bg-gray-900 text-white pt-16">
         <div className="p-8 max-w-5xl mx-auto">
-          {/* Title */}
           <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-orange-400 to-yellow-400">
             Building This Website
           </h1>
@@ -71,7 +69,7 @@ export default function WebsiteCreation() {
               The entire project is open-source on GitHub. Feel free to explore the code!
             </p>
             <Link
-              href="https://github.com/kaimartell/Vercel-portfolio" // <-- Update if needed
+              href="https://github.com/kaimartell/Vercel-portfolio"
               className="inline-block px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded shadow-md text-white font-medium transition-colors"
               target="_blank"
               rel="noopener noreferrer"

@@ -51,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        {/* Give space so content isn't hidden behind the fixed header */}
         <main className="pt-20">{children}</main>
       </body>
     </html>

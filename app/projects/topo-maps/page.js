@@ -11,12 +11,10 @@ export default function TopographicalMaps() {
       </Head>
 
       <main className="min-h-screen bg-gray-900 text-white">
-        {/* Cancel out any global top padding if needed */}
         <div className="-mt-20">
-          {/* Full‑Width Title Image */}
           <div className="w-full">
             <Image
-              src="/topo-thumbnail.jpeg" // Update if you have a different title image path
+              src="/topo-thumbnail.jpeg" 
               alt="Title Image"
               layout="responsive"
               width={1920}
@@ -27,13 +25,10 @@ export default function TopographicalMaps() {
 
           {/* Content Container */}
           <div className="p-8">
-            {/* Increase max-w from 4xl to 5xl for a wider layout */}
             <div className="max-w-5xl mx-auto">
 
-              {/* Header */}
               <h1 className="text-4xl font-bold mb-4">Topographical Maps</h1>
               
-              {/* Introduction */}
               <p className="mb-6 text-gray-300">
                 I’m passionate about maps, mountains, and the art of turning real-world 
                 locations into tangible 3D models. So, I took two places I love—San Francisco, 
@@ -41,7 +36,6 @@ export default function TopographicalMaps() {
                 laser-cut topographical maps.
               </p>
 
-              {/* Highlights / Quick Overview */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-3">Project Highlights</h2>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
@@ -63,7 +57,6 @@ export default function TopographicalMaps() {
                 </ul>
               </section>
 
-              {/* Why These Places */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-3">Why These Places?</h2>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
@@ -79,17 +72,14 @@ export default function TopographicalMaps() {
                 </ul>
               </section>
 
-              {/* Technologies & Materials */}
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-3">Technologies &amp; Materials</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
-                  {/* Tech List */}
                   <ul className="list-disc list-inside space-y-2 bg-gray-800 p-4 rounded-lg">
                     <li><strong>map2stl</strong> for 3D map conversion</li>
                     <li><strong>Kiri:Moto</strong> for slicing into SVG layers</li>
                     <li><strong>Adobe Illustrator</strong> for touch-ups & laser cutter pre-processing</li>
                   </ul>
-                  {/* Materials List */}
                   <ul className="list-disc list-inside space-y-2 bg-gray-800 p-4 rounded-lg">
                     <li>Laser cutter</li>
                     <li>3mm plywood</li>
@@ -103,7 +93,6 @@ export default function TopographicalMaps() {
               <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-2">Project Gallery</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* First Image Card */}
                   <div className="bg-gray-800 rounded-lg overflow-hidden">
                     <div className="relative w-full h-[50vh]">
                       <Image
@@ -121,7 +110,6 @@ export default function TopographicalMaps() {
                     </div>
                   </div>
 
-                  {/* Second Image Card */}
                   <div className="bg-gray-800 rounded-lg overflow-hidden">
                     <div className="relative w-full h-[50vh]">
                       <Image
@@ -138,7 +126,6 @@ export default function TopographicalMaps() {
                       </p>
                     </div>
                   </div>
-                  {/* Third Image Card (Full Width) */}
                   <div className="bg-gray-800 rounded-lg overflow-hidden md:col-span-2">
                     <div className="relative w-full h-[50vh]">
                       <Image
@@ -182,7 +169,6 @@ export default function TopographicalMaps() {
                 </ul>
               </section>
 
-              {/* Navigation Back to Home */}
               <Link href="/" className="text-blue-400 hover:underline">
                 ← Back to Home
               </Link>

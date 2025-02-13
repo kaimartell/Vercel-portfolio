@@ -10,17 +10,13 @@ export default function Home() {
         <title>Kai Martell</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* 
-        The container below cancels out the global top padding (pt-20) from the layout 
-        while applying the original background gradient and text color.
-      */}
       <div className="-mt-20 min-h-screen bg-gradient-to-br from-gray-900 to-black text-white relative">
         {/* About Section */}
         <section
           id="about"
           className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-4"
         >
-          {/* Background Image (only for About Section) */}
+          {/* Background Image*/}
           <div className="absolute inset-0">
             <Image
               src="/background.jpeg"
@@ -31,13 +27,22 @@ export default function Home() {
             />
           </div>
 
-          {/* Bio Text Content */}
+          {/* Bio Text */}
           <div className="relative z-10 md:w-1/2 text-center flex flex-col justify-center">
             <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-orange-400 to-green-400">
               Hi, I&apos;m Kai!
             </h1>
+            <p className="text-lg text-gray-300 mb-1">
+              I'm a student at Tufts University studying biomedical engineering.
+            </p>
+            <p className="text-lg text-gray-300 mb-1">
+              I'm passionate about building instruments and creating new 
+            </p>
             <p className="text-lg text-gray-300 mb-6">
-              Something something something
+              technologies to apply to the medical field.
+            </p>
+            <p className="text-lg text-gray-300 mb-6">
+            See some of my work below!
             </p>
             <Link
               href="/Kai Martell Resume.pdf"
@@ -47,7 +52,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Responsive, Enlarged Profile Picture */}
+          {/* Profile Picture */}
           <div className="relative z-10 md:w-1/2 mt-8 md:mt-0 flex justify-center">
             <div className="relative w-full max-w-lg rounded-lg overflow-hidden shadow-lg md:transform md:-translate-x-20">
               <div className="relative aspect-[3/4]">
@@ -145,7 +150,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact / Socials Section */}
+        {/* Contact Section */}
         <section id="contact" className="py-20 px-4 text-center">
           <h2 className="text-3xl font-semibold mb-6">Connect with Me</h2>
           <div className="flex flex-wrap justify-center gap-6">
