@@ -7,6 +7,7 @@ const projects = [
     title: "Matchbox Car Launcher",
     mainImage: "/launcher.jpeg",
     subtitle: "'The BME is whooping your asses' - Brandon",
+    date: "January 2025",
     description: `
       In this project, I built a launcher for mtchbox cars. The goal was to create a mechanism that could launch a matchbox car up an 8 inch ramp using the energy generated from rubber bands. 
       
@@ -48,6 +49,7 @@ const projects = [
     id: 2,
     title: "Chair",
     mainImage: "/chair.jpeg",
+    date: "January 2025",
     description: `
       In this project, I built a chair from scratch. My goal for the chair was to create something minimalistic and sturdy, while incorporating an interesting angle. 
       To start, I designed the chair in Onshape, making sure to account for the angles and dimensions of the chair. I used the planar to smooth all pieces, and cut using the miter saw, the table saw, and the band saw.  Many of the joints were made using a dowel jig with dowels and wood glue to reinforce. 
@@ -74,6 +76,7 @@ const projects = [
     id: 3,
     title: "Lamp",
     mainImage: "/lamp.jpeg",
+    date: "February 2025",
     description: `
       In this project, I built a sheet metal lamp inspired by a minecraft lantern. This was the first exposure I've had working with sheet metal, a much different medium to design with compared to wood and plastics.
       
@@ -171,6 +174,10 @@ export default function MyNewCoursePortfolio() {
                     <h3 className="text-xl font-small text-gray-400 italic">
                         {proj.subtitle}
                     </h3>
+
+                    <p className="text-gray-300">
+                      {proj.date}
+                    </p>
 
                     <p className="text-gray-300 whitespace-pre-line">
                       {proj.description}
