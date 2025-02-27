@@ -70,6 +70,46 @@ const projects = [
       "Me sitting in the chair"
     ]
   },
+  {
+    id: 3,
+    title: "Lamp",
+    mainImage: "/lamp.jpeg",
+    description: `
+      In this project, I built a sheet metal lamp inspired by a minecraft lantern. This was the first exposure I've had working with sheet metal, a much different medium to design with compared to wood and plastics.
+      
+      I started by creating a CAD model of the lamp, making sure to account for the bends and dimensions of the metal. Since material was limited, I designed the lamp with 4 bent metal posts capped off with a lid and a bottom. The metal pieces were riveted together at the top, and bolted down using bolts and clinch nuts at the bottom so that it could be removed and the lightbulb could be accessed.
+     
+      The windows are made from acrylic, which I frosted and cut in rectangular shapes in true Minecraft fashion, and they are attached to the metal frame with superglue and tape.
+
+      Coincidentally, Amazon was having a sale on smart bulbs ($0.99 for a color changing RGB bulb) so of course I picked one up and installed it just for fun. It's neat that I can now control the hue, warmth, color, and intensity of the light. I also set it up so it turns on at sunset, just a fun addition to the lamp. 
+      `
+    ,
+    technologies: ["Onshape/Solidworks", "Sheet Metal", "Laser Cutting", "Water Jetting", "Jump Shear", "Metal Bending"],
+    materials: ["1x lightbulb socket with switch", "1x lightbulb", "1x 12x12 sheet of 5052-H32 aluminum, 0.032 in. thick", "1x 12x12 sheet of A1008 steel, 0.030 in. thick", "1x 12x24 sheet of transparent yellow acrylic", "1x 12x24 sheet of transparent orange acrylic", "1x 12x24 sheet of clear acrylic", "8x rivets", "4x #6-32 clinch nuts", "4x #6-32 phillips head bolts", "Tape", "Superglue", "PLA filament"],
+    skills: ["CAD Design", "Laser Cut Assembly", "Metal Bending"],
+    challenges: `
+      There were a few challenges to this project, namely 
+        - The metal bending was difficult to get right, and I had to redo a few pieces
+        - Getting the rivets in the right spot was difficult, they aren't aligned perfectly since I was trying to hole punch with too many moving parts. I wish I had drawn out all of my cuts, aligned, and hole punched before I bent all of the pieces around. 
+        - I used superglue for both piecing the windows together and attaching them to the frame, this created glue smudges and also wasn't the best adhesive for the job.
+    `,
+    moreImages: [
+      "/inspo3.jpeg",
+      "/lamplasercut.jpeg",
+      "/lampframe.jpeg",
+      "/lamp2.jpeg",
+      "/lamp3.jpeg",
+      "/lamp.gif"
+    ],
+    imageCaptions: [
+      "Inspiration for the lamp",
+      "A quick laser cut model to feel out scale and dimensions",
+      "The frame pieces cut out and assembled with tape",
+      "The first window, assembled",
+      "Cleaned up window design, duplicated, and assembled with tape",
+      "Smart bulb demonstration"
+    ]
+  }
   // More projects coming soon
 ];
 
@@ -136,7 +176,7 @@ export default function MyNewCoursePortfolio() {
                       {proj.description}
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                       <div>
                         <h3 className="text-xl font-semibold text-purple-300 mb-2">
                           Technologies

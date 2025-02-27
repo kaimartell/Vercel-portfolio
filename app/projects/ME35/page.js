@@ -139,15 +139,6 @@ export default function ME35Portfolio() {
                 );
               })}
 
-              {/* Next Steps */}
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-3 text-indigo-200 hover:text-indigo-100 transition-colors">
-                  Next Steps
-                </h2>
-                <p className="text-gray-300">
-                  Update later
-                </p>
-              </section>
 
               <Link href="/" className="text-blue-400 hover:underline">
                 ← Back to Home
