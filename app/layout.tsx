@@ -1,6 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Kai Martell",
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         <main className="pt-20">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
