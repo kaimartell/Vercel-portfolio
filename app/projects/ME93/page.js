@@ -31,11 +31,10 @@ const projects = [
       Reducing friction of the launch box as it moves along the track
     `,
     moreImages: [
-      "/launcher v1.1.jpeg",
-      "/launcher v1.2.jpeg",
-      "/launcher v2.1.jpeg",
-      "/launcher v2.2.jpeg",
-      
+    { src: "/launcher v1.1.jpeg", isLandscape: false },
+    { src: "/launcher v1.2.jpeg", isLandscape: false },
+    { src: "/launcher v2.1.jpeg", isLandscape: false },
+    { src: "/launcher v2.2.jpeg", isLandscape: false }
     ],
 
     imageCaptions: [
@@ -63,8 +62,8 @@ const projects = [
 
     `,
     moreImages: [
-      "/chair-proto.jpeg",
-      "/chair-me.jpeg"
+      { src: "/chair-proto.jpeg", isLandscape: false },
+      { src: "/chair-me.jpeg", isLandscape: false }
     ],
 
     imageCaptions: [
@@ -97,13 +96,14 @@ const projects = [
         - I used superglue for both piecing the windows together and attaching them to the frame, this created glue smudges and also wasn't the best adhesive for the job.
     `,
     moreImages: [
-      "/inspo3.jpeg",
-      "/lamplasercut.jpeg",
-      "/lampframe.jpeg",
-      "/lamp2.jpeg",
-      "/lamp3.jpeg",
-      "/lamp.gif"
+      { src: "/inspo3.jpeg", isLandscape: false },
+      { src: "/lamplasercut.jpeg", isLandscape: false },
+      { src: "/lampframe.jpeg", isLandscape: false },
+      { src: "/lamp2.jpeg", isLandscape: false },
+      { src: "/lamp3.jpeg", isLandscape: false },
+      { src: "/lamp.gif", isLandscape: false }
     ],
+
     imageCaptions: [
       "Inspiration for the lamp",
       "A quick laser cut model to feel out scale and dimensions",
@@ -111,6 +111,43 @@ const projects = [
       "The first window, assembled",
       "Cleaned up window design, duplicated, and assembled with tape",
       "Smart bulb demonstration"
+    ]
+  },
+  {
+    id: 4,
+    title: "Gravity Powered Record Player",
+    mainImage: "/recordplayer1.jpeg",
+    date: "March 2025",
+    description: `
+      The goal of this project was to use some sort of gravity powered mechanism to spin a record player. The record player had to spin a 7 inch record at 45rpm, for 4 and a half minutes. I wanted to create something that was both functional and aesthetically pleasing, while also being a fun challenge to build.
+      
+      There were a couple routes that I considered taking - a weight falling to spin an axel, some sort of perpetual motion machine, marbles falling down a track, or a water wheel, to name a few. I ended up going the water wheel route, I felt like it would be easy to adjust the speed of the water wheel by tweaking the volume of water and the distance the water is falling. 
+      
+      I started by designing the water wheel in Onshape to confirm a proof of concept. I laser cut the wheel out of acryllic for quick assembly, and verified that it could spin pretty quickly under a slow water stream from the sink. I created the chasis of the record player out of laser cut acryllic as well. 
+
+      Because my record player is water powered, I decided to buy a cheap water pump on Amazon so I can have a constant flow of water. This seems anti gravity powered, but I implemented it in the name of water conservation. The pump dropped off water into a basin at the top, so the flow from the pump wasn't actually what was powering the wheel, it was purely there for preservation purposes. A big tank at the top would have had the same effect. 
+
+      The chasis of the record player is comprised of this lower level water tank which has the pump, and the water fall area with the water wheel. The water wheel is attached to a drive shaft which runs through the box and is converted into vertical rotational movement with a 3D printed miter gear. 
+
+      The needle and speaker components were a bit of an after thought, since it is hard to design and create a proper amplifier with the materials on hand. The arm of the needle is laser cut and mounted onto a swivel point so the needle can follow the grooves of the record. The vibrations are amplified through a paper cone, simply taped to the needle arm. The quality of the audio is admittedly quite terrible. 
+      `,
+    technologies: ["Onshape/Solidworks", "Laser Cutting", "3D Printing"],
+    materials: ["3x 12x24 sheet of colored acryllic", "1x 200mm x 4mm metal rod", "2x 3D printed miter gears", "4x 8mm OD ball bearings", "1x PULACO Submersible Water Pump", "1x 3D printed needle arm stand", "1x bolt", "1x nut", "1x sheet of A24 paper", "Tape", "A ton of hot glue", "Silicone glue", "Needle", "7in record", "Water"],
+    skills: ["CAD Design", "Laser Cut Assembly", "3D Printing", "Assembly"],
+    challenges: `
+      Assembly of the record player was the most difficult part of this project. I had to make sure that all of the elements of the drive shaft were aligned correctly before cementing them in place. The rods, holes, and bearings had to be perfectly centered in order for smooth rotation. 
+      
+      The water wheel was also a challenge, I had to make sure that the water was flowing at the right speed and angle to get the wheel to spin at the right speed. I also had to make sure that the water was flowing evenly across the wheel, otherwise it would spin unevenly and cause the record to skip.
+    `,
+    moreImages: [
+      { src: "/topdown.jpeg", isLandscape: true},
+      { src: "/waterwheel.jpeg", isLandscape: false},
+      { src: "/recordplayer.gif", isLandscape: false}
+    ],
+    imageCaptions: [
+      "Top down view",
+      "Water wheel mechanism",
+      "Record player demo"
     ]
   }
   // More projects coming soon
@@ -227,28 +264,31 @@ export default function MyNewCoursePortfolio() {
 
                     {proj.moreImages && proj.moreImages.length > 0 && (
                     <div>
-                        <h3 className="text-xl font-semibold text-yellow-300 mb-3">
+                      <h3 className="text-xl font-semibold text-yellow-300 mb-3">
                         More Pictures
-                        </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {proj.moreImages.map((img, i) => (
-                            <div key={i} className="relative w-full h-auto bg-gray-700 rounded-md overflow-hidden">
+                      </h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+                        {proj.moreImages.map((imgObj, i) => (
+                          <div
+                            key={i}
+                            className={`relative w-full h-auto bg-gray-700 rounded-md overflow-hidden ${imgObj.isLandscape ? "sm:col-span-2" : ""}`}
+                          >
                             <Image
-                                src={img}
-                                alt={`${proj.title} - Extra ${i + 1}`}
-                                layout="responsive"
-                                width={500}
-                                height={300}
-                                objectFit="contain"
+                              src={imgObj.src}
+                              alt={`${proj.title} - Extra ${i + 1}`}
+                              layout="responsive"
+                              width={500}
+                              height={300}
+                              objectFit="contain"
                             />
                             <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
-                                {proj.imageCaptions[i]}
+                              {proj.imageCaptions[i]}
                             </div>
-                            </div>
+                          </div>
                         ))}
-                        </div>
+                      </div>
                     </div>
-                    )}
+                  )}
                 </div>
                 </div>
             ))}
