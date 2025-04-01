@@ -31,10 +31,10 @@ const projects = [
       Reducing friction of the launch box as it moves along the track
     `,
     moreImages: [
-    { src: "/launcher v1.1.jpeg", isLandscape: false },
-    { src: "/launcher v1.2.jpeg", isLandscape: false },
-    { src: "/launcher v2.1.jpeg", isLandscape: false },
-    { src: "/launcher v2.2.jpeg", isLandscape: false }
+    { src: "/launcher v1.1.jpeg", isLandscape: false, type: "image" },
+    { src: "/launcher v1.2.jpeg", isLandscape: false, type: "image" },
+    { src: "/launcher v2.1.jpeg", isLandscape: false, type: "image" },
+    { src: "/launcher v2.2.jpeg", isLandscape: false, type: "image" }
     ],
 
     imageCaptions: [
@@ -62,8 +62,8 @@ const projects = [
 
     `,
     moreImages: [
-      { src: "/chair-proto.jpeg", isLandscape: false },
-      { src: "/chair-me.jpeg", isLandscape: false }
+      { src: "/chair-proto.jpeg", isLandscape: false, type: "image" },
+      { src: "/chair-me.jpeg", isLandscape: false, type: "image" }
     ],
 
     imageCaptions: [
@@ -96,12 +96,12 @@ const projects = [
         - I used superglue for both piecing the windows together and attaching them to the frame, this created glue smudges and also wasn't the best adhesive for the job.
     `,
     moreImages: [
-      { src: "/inspo3.jpeg", isLandscape: false },
-      { src: "/lamplasercut.jpeg", isLandscape: false },
-      { src: "/lampframe.jpeg", isLandscape: false },
-      { src: "/lamp2.jpeg", isLandscape: false },
-      { src: "/lamp3.jpeg", isLandscape: false },
-      { src: "/lamp.gif", isLandscape: false }
+      { src: "/inspo3.jpeg", isLandscape: false, type: "image" },
+      { src: "/lamplasercut.jpeg", isLandscape: false, type: "image" },
+      { src: "/lampframe.jpeg", isLandscape: false, type: "image" },
+      { src: "/lamp2.jpeg", isLandscape: false, type: "image" },
+      { src: "/lamp3.jpeg", isLandscape: false, type: "image" },
+      { src: "/lamp.mov", isLandscape: false, type: "video" }
     ],
 
     imageCaptions: [
@@ -140,9 +140,9 @@ const projects = [
       The water wheel was also a challenge, I had to make sure that the water was flowing at the right speed and angle to get the wheel to spin at the right speed. I also had to make sure that the water was flowing evenly across the wheel, otherwise it would spin unevenly and cause the record to skip.
     `,
     moreImages: [
-      { src: "/topdown.jpeg", isLandscape: true},
-      { src: "/waterwheel.jpeg", isLandscape: false},
-      { src: "/recordplayer.gif", isLandscape: false}
+      { src: "/topdown.jpeg", isLandscape: true, type: "image" },
+      { src: "/waterwheel.jpeg", isLandscape: false, type: "image" },
+      { src: "/recordplayer.mov", isLandscape: false, type: "video" }
     ],
     imageCaptions: [
       "Top down view",
@@ -268,24 +268,35 @@ export default function MyNewCoursePortfolio() {
                         More Pictures
                       </h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
-                        {proj.moreImages.map((imgObj, i) => (
+                      {proj.moreImages.map((imgObj, i) => {
+                        return (
                           <div
                             key={i}
-                            className={`relative w-full h-auto bg-gray-700 rounded-md overflow-hidden ${imgObj.isLandscape ? "sm:col-span-2" : ""}`}
+                            className={`relative w-full h-auto bg-gray-700 rounded-md overflow-hidden 
+                              ${imgObj.isLandscape ? "sm:col-span-2" : ""}`}
                           >
-                            <Image
-                              src={imgObj.src}
-                              alt={`${proj.title} - Extra ${i + 1}`}
-                              layout="responsive"
-                              width={500}
-                              height={300}
-                              objectFit="contain"
-                            />
+                            {imgObj.type === "video" ? (
+                              <video
+                                src={imgObj.src}
+                                controls
+                                className="h-full aspect-[4/3] object-contain"
+                              />
+                            ) : (
+                              <Image
+                                src={imgObj.src}
+                                alt={`${proj.title} - Extra ${i + 1}`}
+                                layout="responsive"
+                                width={500}
+                                height={300}
+                                objectFit="contain"
+                              />
+                            )}
                             <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
                               {proj.imageCaptions[i]}
                             </div>
                           </div>
-                        ))}
+                        );
+                      })}
                       </div>
                     </div>
                   )}
