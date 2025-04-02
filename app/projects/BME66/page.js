@@ -49,7 +49,7 @@ return (
                         {/* Project Website */}
                         <div className="mb-8">
                             <Link
-                                href="https://www.example-handwarmingbracelet.com"
+                                href="https://sites.tufts.edu/teamgreen/"
                                 className="inline-block px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded shadow-md text-white font-medium transition-colors"
                                 target="_blank"
                                 rel="noopener noreferrer"

@@ -142,12 +142,12 @@ const projects = [
     moreImages: [
       { src: "/topdown.jpeg", isLandscape: true, type: "image" },
       { src: "/waterwheel.jpeg", isLandscape: false, type: "image" },
-      { src: "/recordplayer.mov", isLandscape: false, type: "video" }
+      { src: "https://www.youtube.com/embed/-Qc_X85o3xg", isLandscape: false, type: "youtube" }
     ],
     imageCaptions: [
       "Top down view",
-      "Water wheel mechanism",
-      "Record player demo"
+      "Water wheel mechanism"
+      //"Record player demo"
     ]
   }
   // More projects coming soon
@@ -275,7 +275,15 @@ export default function MyNewCoursePortfolio() {
                             className={`relative w-full h-auto bg-gray-700 rounded-md overflow-hidden 
                               ${imgObj.isLandscape ? "sm:col-span-2" : ""}`}
                           >
-                            {imgObj.type === "video" ? (
+                            {imgObj.type === "youtube" ? (
+                              <iframe
+                                src={imgObj.src}
+                                title={`${proj.title} - Extra ${i + 1}`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                className="h-full w-full aspect-[9/16] justify-center"
+                              />
+                            ) : imgObj.type === "video" ? (
                               <video
                                 src={imgObj.src}
                                 controls
@@ -289,6 +297,7 @@ export default function MyNewCoursePortfolio() {
                                 width={500}
                                 height={300}
                                 objectFit="contain"
+                                className="h-full w-full justify-center"
                               />
                             )}
                             <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
