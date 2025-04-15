@@ -101,7 +101,7 @@ const projects = [
       { src: "/lampframe.jpeg", isLandscape: false, type: "image" },
       { src: "/lamp2.jpeg", isLandscape: false, type: "image" },
       { src: "/lamp3.jpeg", isLandscape: false, type: "image" },
-      { src: "/lamp.mov", isLandscape: false, type: "video" }
+      { src: "https://youtube.com/embed/TNHR8792aew", isLandscape: false, type: "youtube" }
     ],
 
     imageCaptions: [
