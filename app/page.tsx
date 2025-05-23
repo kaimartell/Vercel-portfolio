@@ -74,25 +74,25 @@ export default function Home() {
             {[1, 2, 3, 4, 5].map((id) => (
               <Link
                 key={id}
-                href={id === 1 ? "/projects/topo-maps" 
+                href={id === 4 ? "/projects/topo-maps" 
                     : id === 2 ? "/projects/ME35"
                     : id === 3 ? "/projects/ME93"
-                    : id === 4 ? "/projects/BME66"
+                    : id === 1 ? "/projects/BME66"
                     : id === 5 ? "/projects/this-website"
                     : id === 6 ? "/projects/segment-hunter"
                     : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
-                <div className="relative w-full h-48 mb-4">
+                <div className="relative w-full h-80 mb-4">
                   <Image
                     src={
-                      id === 1
+                      id === 4
                         ? "/topo-thumbnail.jpeg"
                         : id === 2
                         ? "/me35-thumbnail.jpeg"
                         : id === 3
                         ? "/dff-background.jpeg"
-                        : id === 4
+                        : id === 1
                         ? "/bme66-thumbnail.jpeg"
                         : id === 5
                         ? "/website-thumbnail.jpeg"
@@ -103,13 +103,13 @@ export default function Home() {
                     layout="fill"
                     objectFit="cover"
                     alt={
-                      id === 1
+                      id === 4
                         ? "Topographical Maps Thumbnail"
                         : id === 2
                         ? "ME35 Thumbnail"
                         : id === 3
                         ? "ME93 Thumbnail"
-                        : id === 4
+                        : id === 1
                         ? "BME66 Thumbnail"
                         : id === 5
                         ? "This Website Thumbnail"
@@ -121,22 +121,22 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  {id === 1 ? "Topographical Maps" 
+                  {id === 4 ? "Topographical Maps" 
                   : id === 2 ? "ME35 - Intro to Robotics"
                   : id === 3 ? "ME93 - Design for Fabrication"
-                  : id === 4 ? "BME66 - Engineering Design"
+                  : id === 1 ? "BME66 - Engineering Design"
                   : id === 5 ? "This Website"
                   : id === 6 ? "Segment Hunter"
                   : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
-                  {id === 1
-                    ? "Explore my topographical maps project."
+                  {id === 4
+                    ? "Explore my topographical maps project"
                     : id === 2
-                    ? "Learn about my ME35 coursework."
+                    ? "Learn about my ME35 coursework"
                     : id === 3
                     ? "Classwork around purely mechanical design"
-                    : id === 4
+                    : id === 1
                     ? "Designing a product for hand warmth"
                     : id === 5
                     ? "A brief overview of the creation of this website"
@@ -155,7 +155,7 @@ export default function Home() {
           <h2 className="text-3xl font-semibold mb-6">Connect with Me</h2>
           <div className="flex flex-wrap justify-center gap-6">
             <a
-              href="https://www.linkedin.com/in/kai-martell-b27858188/"
+              href="https://www.linkedin.com/in/kaimartell"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-blue-400 hover:text-blue-500 transition-colors"
