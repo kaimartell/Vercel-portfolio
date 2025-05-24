@@ -33,7 +33,7 @@ export default function Home() {
               Hi, I&apos;m Kai!
             </h1>
             <p className="text-lg text-gray-300 mb-1">
-              I'm a student at Tufts University studying biomedical engineering.
+              I'm a recent graduate of Tufts University with a degree in Biomedical Engineering.
             </p>
             <p className="text-lg text-gray-300 mb-1">
               I'm passionate about building instruments and creating new 
