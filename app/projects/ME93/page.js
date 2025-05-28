@@ -154,7 +154,7 @@ const projects = [
   {
     id: 5,
     title: "Big Wheel",
-    mainImage: "/bigwheel.jpeg",
+    mainImage: "/bigwheel1.jpeg",
     date: "April 2025",
     description: `
       The goal of this project was to create a human powered vehicle to be raced around the patio of our engineering building. The vehicle had to fit under the Archways of Despair, a pair of 32 inch wide and 45 inch tall arches. 
@@ -188,14 +188,15 @@ const projects = [
       
       The steering also posed a challenge, and we left the steering mechanisms to the last minute (Not purposefully, just how it worked out). `,
     moreImages: [
-      { src: "/bigwheel1.jpeg", isLandscape: true, type: "image" },
+      //{ src: "/bigwheel1.jpeg", isLandscape: true, type: "image" },
       { src: "/bigwheel3.jpeg", isLandscape: false, type: "image" },
-      { src: "/bigwheel4.jpeg", isLandscape: false, type: "image" }
+      { src: "/ME93-team.JPG", isLandscape: false, type: "image" }
     ],
     imageCaptions: [
-      "Big wheel and Arches of Despair",
+      //"Big wheel and Arches of Despair",
       "Big wheel, fork and pedals",
-      "Me sitting on the big wheel"
+      "Big wheel trio (I lack a better photo, and some camera awareness)",
+      //"Me sitting on the big wheel"
     ]
   }
   // More projects coming soon
