@@ -67,8 +67,9 @@ export default function AdvancedRobotics() {
           <Image
             src="/XRP.png"
             alt="Robotics Background"
-            fill
-            className="object-cover rounded-lg"
+            width={1920}
+            height={500}
+            className="object-cover w-full h-full"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col justify-center p-8">
             <h1 className="text-5xl font-bold mb-4">Advanced Robotics with XRP</h1>
