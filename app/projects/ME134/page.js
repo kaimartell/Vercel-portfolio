@@ -63,13 +63,13 @@ export default function AdvancedRobotics() {
 
       <main className="relative -top-20 min-h-screen bg-gray-900 text-white pt-8 pb-16 px-4">
         {/* Page Header with Background */}
-        <header className="relative top-20 max-w-8xl mx-auto mb-12 h-[500] -mt-8">
+        <header className="relative top-20 w-full mx-auto mb-12 h-[500px] -mt-8">
+
           <Image
             src="/XRP.png"
             alt="Robotics Background"
-            width={1920}
-            height={500}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover rounded-lg"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col justify-center p-8">
             <h1 className="text-5xl font-bold mb-4">Advanced Robotics with XRP</h1>
