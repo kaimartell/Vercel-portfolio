@@ -25,7 +25,7 @@ export default function WebsiteCreation() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen bg-gray-900 text-white pt-16">
+      <main className="relative -top-15 min-h-screen bg-gray-900 text-white">
         <div className="p-8 max-w-5xl mx-auto">
           <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-orange-400 to-yellow-400">
             Building This Website

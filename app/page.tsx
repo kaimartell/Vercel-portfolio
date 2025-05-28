@@ -71,49 +71,59 @@ export default function Home() {
         <section id="projects" className="py-20 px-4">
           <h2 className="text-3xl font-semibold text-center mb-10">Projects & Coursework</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5].map((id) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((id) => (
               <Link
                 key={id}
-                href={id === 4 ? "/projects/topo-maps" 
-                    : id === 2 ? "/projects/ME35"
-                    : id === 3 ? "/projects/ME93"
-                    : id === 1 ? "/projects/BME66"
-                    : id === 5 ? "/projects/this-website"
-                    : id === 6 ? "/projects/segment-hunter"
+                href={id === 6 ? "/projects/topo-maps" 
+                    : id === 3 ? "/projects/ME35"
+                    : id === 1 ? "/projects/ME93"
+                    : id === 4 ? "/projects/BME66"
+                    : id === 2 ? "/projects/BME9"
+                    : id === 5 ? "projects/ME134"
+                    : id === 7 ? "/projects/this-website"
+                    : id === 10 ? "/projects/segment-hunter"
                     : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="relative w-full h-80 mb-4">
                   <Image
                     src={
-                      id === 4
-                        ? "/topo-thumbnail.jpeg"
-                        : id === 2
-                        ? "/me35-thumbnail.jpeg"
-                        : id === 3
-                        ? "/dff-background.jpeg"
-                        : id === 1
-                        ? "/bme66-thumbnail.jpeg"
-                        : id === 5
-                        ? "/website-thumbnail.jpeg"
-                        : id === 6
-                        ? "/segment-hunter-thumbnail.jpeg"
-                        : `/projects/project-${id}.jpeg`
+                        id === 1
+                          ? "/dff-background.jpeg"
+                          : id === 2
+                          ? "/bme9-banner.jpg"
+                          : id === 3
+                          ? "/me35-thumbnail.jpeg"
+                          : id === 4
+                          ? "/bme66-thumbnail.jpeg"
+                          : id === 5
+                          ? "/xrp.png"
+                          : id === 6
+                          ? "/topo-thumbnail.jpeg"
+                          : id === 7
+                          ? "/website-thumbnail.jpeg"
+                          : id === 10
+                          ? "/segment-hunter-thumbnail.jpeg"
+                          : `/projects/project-${id}.jpeg`
                     }
                     layout="fill"
                     objectFit="cover"
                     alt={
-                      id === 4
+                      id === 6
                         ? "Topographical Maps Thumbnail"
-                        : id === 2
-                        ? "ME35 Thumbnail"
                         : id === 3
-                        ? "ME93 Thumbnail"
+                        ? "ME35 Thumbnail"
                         : id === 1
+                        ? "ME93 Thumbnail"
+                        : id === 4
                         ? "BME66 Thumbnail"
+                        : id === 2
+                        ? "BME9 Thumbnail"
                         : id === 5
+                        ? "ME134 Thumbnail"
+                        : id === 7
                         ? "This Website Thumbnail"
-                        : id === 6
+                        : id === 10
                         ? "Segment Hunter Thumbnail"
                         : `Project ${id} Thumbnail`
                     }
@@ -121,26 +131,32 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
-                  {id === 4 ? "Topographical Maps" 
-                  : id === 2 ? "ME35 - Intro to Robotics"
-                  : id === 3 ? "ME93 - Design for Fabrication"
-                  : id === 1 ? "BME66 - Engineering Design"
-                  : id === 5 ? "This Website"
-                  : id === 6 ? "Segment Hunter"
+                  {id === 6 ? "Topographical Maps" 
+                  : id === 3 ? "ME35 - Intro to Robotics"
+                  : id === 1 ? "ME93 - Design for Fabrication"
+                  : id === 4 ? "BME66 - Engineering Design"
+                  : id === 2 ? "BME 9 - Senior Capstone Design"
+                  : id === 5 ? "ME134 - Advanced Robotics"
+                  : id === 7 ? "This Website"
+                  : id === 10 ? "Segment Hunter"
                   : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
-                  {id === 4
+                  {id === 6
                     ? "Explore my topographical maps project"
-                    : id === 2
-                    ? "Learn about my ME35 coursework"
                     : id === 3
-                    ? "Classwork around purely mechanical design"
+                    ? "Learn about my ME35 coursework"
                     : id === 1
+                    ? "Classwork around purely mechanical design"
+                    : id === 4
                     ? "Designing a product for hand warmth"
+                    : id === 2
+                    ? "Liver Portal Vein Cannula Developement"
                     : id === 5
+                    ? "Advanced robotics work with XRP Robots"
+                    : id === 7
                     ? "A brief overview of the creation of this website"
-                    : id === 6
+                    : id === 10
                     ? "A tool for Strava users to find segments"
                     : `A brief description of project ${id}. 
                       Learn more about its innovative solutions and technical details.`}
