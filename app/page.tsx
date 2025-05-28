@@ -91,13 +91,13 @@ export default function Home() {
                         id === 1
                           ? "/dff-background.jpeg"
                           : id === 2
-                          ? "/bme9-banner.jpg"
+                          ? "/bme9-banner.JPG"
                           : id === 3
                           ? "/me35-thumbnail.jpeg"
                           : id === 4
                           ? "/bme66-thumbnail.jpeg"
                           : id === 5
-                          ? "/xrp.png"
+                          ? "/XRP.png"
                           : id === 6
                           ? "/topo-thumbnail.jpeg"
                           : id === 7
