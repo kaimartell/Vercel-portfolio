@@ -190,13 +190,14 @@ const projects = [
     moreImages: [
       //{ src: "/bigwheel1.jpeg", isLandscape: true, type: "image" },
       { src: "/bigwheel3.jpeg", isLandscape: false, type: "image" },
-      { src: "/ME93-team.JPG", isLandscape: false, type: "image" }
+      { src: "/ME93-team.JPG", isLandscape: false, type: "image" },
+      { src: "/bigwheel4.jpeg", isLandscape: false, type: "image" },
     ],
     imageCaptions: [
       //"Big wheel and Arches of Despair",
       "Big wheel, fork and pedals",
       "Big wheel trio (I lack a better photo, and some camera awareness)",
-      //"Me sitting on the big wheel"
+      "Me sitting on the big wheel"
     ]
   }
   // More projects coming soon
