@@ -33,13 +33,13 @@ export default function Home() {
               Hi, I&apos;m Kai!
             </h1>
             <p className="text-lg text-gray-300 mb-1">
-              I'm a recent graduate of Tufts University with a degree in Biomedical Engineering.
+              I’m a graduate MSME student at Tufts with a background in Biomedical Engineering.
             </p>
             <p className="text-lg text-gray-300 mb-1">
-              I'm passionate about building instruments and creating new 
+              I love building mechanical systems and robots,
             </p>
             <p className="text-lg text-gray-300 mb-6">
-              technologies to apply to the medical field.
+              especially when they connect back to medical technology.
             </p>
             <p className="text-lg text-gray-300 mb-6">
             See some of my work below!
