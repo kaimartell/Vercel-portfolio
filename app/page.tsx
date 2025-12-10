@@ -71,7 +71,7 @@ export default function Home() {
         <section id="projects" className="py-20 px-4">
           <h2 className="text-3xl font-semibold text-center mb-10">Projects & Coursework</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6, 7].map((id) => (
+            {[1, 2, 3, 11, 4, 5, 6, 7].map((id) => (
               <Link
                 key={id}
                 href={id === 6 ? "/projects/topo-maps" 
@@ -82,6 +82,7 @@ export default function Home() {
                     : id === 5 ? "projects/ME134"
                     : id === 7 ? "/projects/this-website"
                     : id === 10 ? "/projects/segment-hunter"
+                    : id === 11 ? "/projects/cervelo"
                     : `/projects/project-${id}`}
                 className="bg-gray-800 p-6 rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300"
               >
@@ -104,6 +105,8 @@ export default function Home() {
                           ? "/website-thumbnail.jpeg"
                           : id === 10
                           ? "/segment-hunter-thumbnail.jpeg"
+                          : id === 11
+                          ? "/cervelo1.jpeg"
                           : `/projects/project-${id}.jpeg`
                     }
                     layout="fill"
@@ -125,6 +128,8 @@ export default function Home() {
                         ? "This Website Thumbnail"
                         : id === 10
                         ? "Segment Hunter Thumbnail"
+                        : id === 11
+                        ? "Cervelo Thumbnail"
                         : `Project ${id} Thumbnail`
                     }
                     className="rounded-md"
@@ -139,6 +144,7 @@ export default function Home() {
                   : id === 5 ? "ME134 - Advanced Robotics"
                   : id === 7 ? "This Website"
                   : id === 10 ? "Segment Hunter"
+                  : id === 11 ? "Cervelo Build"
                   : `Project ${id}`}
                 </h3>
                 <p className="text-gray-400">
@@ -158,6 +164,8 @@ export default function Home() {
                     ? "A brief overview of the creation of this website"
                     : id === 10
                     ? "A tool for Strava users to find segments"
+                    : id === 11
+                    ? "Building a custom Cervelo gravel bike"
                     : `A brief description of project ${id}. 
                       Learn more about its innovative solutions and technical details.`}
                 </p>
