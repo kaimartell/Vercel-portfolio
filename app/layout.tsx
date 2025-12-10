@@ -55,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <main className="pt-20 bg-gray-900">{children}</main>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
