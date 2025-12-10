@@ -421,10 +421,6 @@ export default function CerveloBuild() {
               BUILD LOG · MISTAKES · TOOL LEARNINGS
             </span>
           </div>
-          <p className="text-sm text-gray-400 mb-6 max-w-3xl">
-            This was my first full build from a bare frame, so I treated it like a mini engineering project:
-            document the decisions, understand every standard involved, and own the mistakes instead of hiding them.
-          </p>
 
           <div className="space-y-4">
             {assemblySteps.map((step, index) => (
