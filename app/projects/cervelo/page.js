@@ -211,7 +211,7 @@ export default function CerveloBuild() {
                   Cervélo Áspero Gravel Build
                 </h1>
                 <p className="mt-4 max-w-2xl text-lg text-gray-300">
-                  An engineer-brain excuse to build my dream gravel bike from a bare Cervélo Áspero frameset.
+                  Building my dream Cervelo Aspero
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
@@ -323,7 +323,7 @@ export default function CerveloBuild() {
                   Why this frame
                 </h4>
                 <p className="text-sm text-gray-300">
-                  I’ve always dreamed of a bike like the Áspero—something with wider tire clearance, a fast frame,
+                  I’ve always dreamed of a bike like the Áspero - something with wider tire clearance, a fast frame,
                   and a gorgeous geometry. I’d been eyeing bikes like the Crux, Stigmata, and Factor Ostro Gravel,
                   but when a shop in Colorado put this Áspero frameset on sale, that basically locked in the direction
                   of the build.
