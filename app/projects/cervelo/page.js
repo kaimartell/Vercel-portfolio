@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function CerveloBuild() {
@@ -140,9 +141,9 @@ export default function CerveloBuild() {
       caption: "Climbing Bobcat Trail in Tennessee Valley, CA",
     },
     {
-        src: "/cervelo3.jpeg",
-        alt: "Little Compton",
-        caption: "Little Compton, RI",
+      src: "/cervelo3.jpeg",
+      alt: "Little Compton",
+      caption: "Little Compton, RI",
     },
     {
       src: "/cervelo4.jpeg",
@@ -245,12 +246,15 @@ export default function CerveloBuild() {
                 </div>
               </div>
 
-              {/* Hero Image (first ride / Talloires) */}
+              {/* Hero Image */}
               <div className="relative">
-                <img
+                <Image
                   src="/cervelo_glam.jpeg"
                   alt="Cervelo Áspero overlooking Lake Tahoe, CA"
-                  className="w-full rounded-3xl border border-gray-800 bg-gray-900/60 shadow-2xl shadow-black/40 object-cover"
+                  width={900}
+                  height={700}
+                  className="w-full h-auto rounded-3xl border border-gray-800 bg-gray-900/60 shadow-2xl shadow-black/40 object-cover"
+                  priority
                 />
                 <div className="absolute -bottom-4 -right-4 hidden sm:block rounded-2xl border border-gray-800 bg-black/70 px-4 py-2 text-xs text-gray-300 backdrop-blur">
                   Barker Pass • Lake Tahoe, CA
@@ -289,12 +293,14 @@ export default function CerveloBuild() {
               </div>
             </div>
 
-            {/* Intent-side image (bare frame / use case) */}
+            {/* Intent-side image */}
             <div className="space-y-4">
-              <img
+              <Image
                 src="/vt_gravel.jpeg"
                 alt="Cervélo Áspero on Vermont gravel roads"
-                className="w-full rounded-2xl border border-gray-800 bg-gray-900/60 object-cover"
+                width={900}
+                height={700}
+                className="w-full h-auto rounded-2xl border border-gray-800 bg-gray-900/60 object-cover"
               />
               <p className="text-xs text-gray-400">
                 Example intended use case: Vermont gravel adventuring during peak foliage.
@@ -381,14 +387,15 @@ export default function CerveloBuild() {
               >
                 <div className="relative">
                   {section.image && (
-                    <div className="aspect-[4/3] overflow-hidden border-b border-gray-800">
-                        <img
+                    <div className="relative aspect-[4/3] w-full overflow-hidden border-b border-gray-800">
+                      <Image
                         src={section.image.src}
                         alt={section.image.alt}
-                        className="h-full w-full object-cover"
-                        />
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    )}
+                  )}
                   <div className="absolute left-4 top-3 rounded-full border border-gray-800 bg-black/60 px-3 py-1 text-[0.6rem] font-semibold tracking-[0.18em] text-gray-200">
                     {section.tag}
                   </div>
@@ -488,10 +495,12 @@ export default function CerveloBuild() {
 
             {/* Scenic impressions photo */}
             <div className="space-y-4">
-              <img
+              <Image
                 src="/coldupetitstbernard.jpeg"
                 alt="Cervélo Áspero at elevation on Col du Petit St. Bernard"
-                className="w-full rounded-2xl border border-gray-800 bg-gray-900/60 object-cover"
+                width={900}
+                height={700}
+                className="w-full h-auto rounded-2xl border border-gray-800 bg-gray-900/60 object-cover"
               />
               <p className="text-xs text-gray-400">
                 First big climb: Col du Petit St. Bernard in the French Alps, a lovely 16.5 mi (26.7km), 4612 ft (1406m),
@@ -503,72 +512,72 @@ export default function CerveloBuild() {
 
         {/* Photo Gallery Carousel */}
         <section className="max-w-4xl mx-auto px-6 pb-14">
-        <div className="flex items-center justify-between gap-4 mb-4">
+          <div className="flex items-center justify-between gap-4 mb-4">
             <h2 className="text-2xl font-semibold">Photo Gallery</h2>
             <span className="text-[0.65rem] uppercase tracking-[0.2em] text-gray-400">
-            BUILD • DETAILS • RIDES
+              BUILD • DETAILS • RIDES
             </span>
-        </div>
+          </div>
 
-        {/* Outer wrapper — removed border + background */}
-        <div className="relative rounded-2xl overflow-hidden">
-
-            {/* IMAGE + CONTROLS — removed bg-black and p-4 spacing */}
+          <div className="relative rounded-2xl overflow-hidden">
+            {/* Image + controls */}
             <div className="relative flex items-center justify-center">
-            <div className="max-w-full max-h-[85vh] flex items-center justify-center overflow-hidden">
-                <img
-                src={galleryImages[currentSlide].src}
-                alt={galleryImages[currentSlide].alt}
-                className="object-contain w-full h-full rounded-xl"
-                />
-            </div>
+              <div className="relative w-full max-h-[85vh] flex items-center justify-center">
+                {/* Use a flexible box with Image set to fill + contain */}
+                <div className="relative w-full" style={{ aspectRatio: "4 / 3" }}>
+                  <Image
+                    src={galleryImages[currentSlide].src}
+                    alt={galleryImages[currentSlide].alt}
+                    fill
+                    className="object-contain rounded-xl"
+                  />
+                </div>
+              </div>
 
-            {/* Controls */}
-            <button
+              {/* Controls */}
+              <button
                 type="button"
                 onClick={handlePrev}
                 className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-sm text-gray-100 hover:bg-black/70 transition"
                 aria-label="Previous photo"
-            >
+              >
                 ‹
-            </button>
+              </button>
 
-            <button
+              <button
                 type="button"
                 onClick={handleNext}
                 className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-sm text-gray-100 hover:bg-black/70 transition"
                 aria-label="Next photo"
-            >
+              >
                 ›
-            </button>
+              </button>
             </div>
 
-            {/* CAPTION + DOTS */}
+            {/* Caption + dots */}
             <div className="px-4 py-4">
-            <p className="text-xs text-gray-300 text-center">
+              <p className="text-xs text-gray-300 text-center">
                 {galleryImages[currentSlide].caption}
-            </p>
+              </p>
 
-            <div className="mt-3 flex justify-center gap-2">
+              <div className="mt-3 flex justify-center gap-2">
                 {galleryImages.map((_, idx) => (
-                <button
+                  <button
                     key={idx}
                     type="button"
                     onClick={() => setCurrentSlide(idx)}
                     className={`h-2 w-2 rounded-full transition ${
-                    idx === currentSlide
+                      idx === currentSlide
                         ? "bg-indigo-400"
                         : "bg-gray-600 hover:bg-gray-400"
                     }`}
                     aria-label={`Go to photo ${idx + 1}`}
-                />
+                  />
                 ))}
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </section>
-
-
 
         <div className="max-w-6xl mx-auto px-6 pb-16">
           <Link href="/" className="text-blue-400 hover:underline">
