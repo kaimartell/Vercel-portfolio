@@ -1,9 +1,9 @@
-import type { NextConfig } from "next";
-
+// Replace this string with the Vercel deployment URL for the engineering concepts app.
 const ENGINEERING_CONCEPTS_DEPLOYMENT_URL =
-  "https://engineering-concepts.vercel.app/";
+  "https://engineering-concepts.vercel.app/".replace(/\/+$/, "");
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   async rewrites() {
     return [
       {
