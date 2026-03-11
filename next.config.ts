@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const ENGINEERING_CONCEPTS_DEPLOYMENT_URL =
-  "https://engineeringconcepts-placeholder.vercel.app";
+  "https://engineering-concepts.vercel.app/";
 
 const nextConfig: NextConfig = {
   async rewrites() {
